@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Personas en Salesforce - Reto Técnico</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-cloud"></i>
+                <h1>Lista de Personas en Salesforce</h1>
+            </div>
+            <div class="controls">
+                <div class="search-container">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Buscar personas...">
+                </div>
+                <button class="btn btn-outline">
+                    <i class="fas fa-filter"></i> Filtrar
+                </button>
+                <button class="btn btn-primary">
+                    <i class="fas fa-plus"></i> Nueva Persona
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-icon users">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="stat-content">
+                    <div class="stat-value" id="totalPersons">10</div>
+                    <div class="stat-label">Personas registradas</div>
+                </div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon gender">
+                    <i class="fas fa-venus-mars"></i>
+                </div>
+                <div class="stat-content">
+                    <div class="stat-value" id="genderRatio">60% H / 40% M</div>
+                    <div class="stat-label">Distribución de género</div>
+                </div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon location">
+                    <i class="fas fa-globe-americas"></i>
+                </div>
+                <div class="stat-content">
+                    <div class="stat-value" id="countriesCount">5</div>
+                    <div class="stat-label">Países diferentes</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="list-header">
+            <h2>Listado de Personas</h2>
+            <div class="filters">
+                <select class="filter-select" id="genderFilter">
+                    <option value="all">Todos los géneros</option>
+                    <option value="male">Masculino</option>
+                    <option value="female">Femenino</option>
+                </select>
+                <select class="filter-select" id="sortBy">
+                    <option value="name">Ordenar por nombre</option>
+                    <option value="age">Ordenar por edad</option>
+                    <option value="country">Ordenar por país</option>
+                </select>
+            </div>
+        </div>
+        
+        <div id="personList"></div>
+    </main>
+
+    <footer>
+        <p>© 2023 Salesforce Demo - Reto Técnico | Desarrollado con <i class="fas fa-heart"></i></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
